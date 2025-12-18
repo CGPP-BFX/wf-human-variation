@@ -213,6 +213,7 @@ def create_str_histogram(
         repeat, hist_data, pathologic_min, pathologic_max, normal_max,
         cn1, cn2, disease):
     """Create a histogram of STR results for a given repeat."""
+    print(disease, repeat)
     h3(disease + ' (' + repeat + ')')
     df = hist_data[hist_data['VARID'] == repeat]['copy_number']
     plt = histplot(
