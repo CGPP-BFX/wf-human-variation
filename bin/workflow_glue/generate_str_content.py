@@ -108,6 +108,8 @@ def extract_sequences(bam, merged_tsv):
                 # Create STR identifier for plot title
                 disease = merged_varid['Disease'].values[0]
                 str_identifier = f"{disease} ({varid})"
+                print("Disease: ", disease)
+                print("STR identifier: ", str_identifier)
 
                 # Collate STR Summary info into dict
                 if str_identifier not in str_seq_dict:

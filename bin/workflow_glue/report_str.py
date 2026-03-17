@@ -212,6 +212,7 @@ def histogram_with_mean_and_median(
 def create_str_histogram(
         repeat, hist_data, pathologic_min, pathologic_max, normal_max,
         cn1, cn2, disease):
+    print(disease, repeat)
     """Create a histogram of STR results for a given repeat."""
     h3(disease + ' (' + repeat + ')')
     df = hist_data[hist_data['VARID'] == repeat]['copy_number']

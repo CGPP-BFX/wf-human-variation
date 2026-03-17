@@ -27,6 +27,9 @@ workflow str {
 
     str_list = projectDir.resolve("./data/wf_str_repeats.bed").toString()
     variant_catalogue_hg38 = projectDir.resolve("./data/variant_catalog_hg38.json").toString()
+    
+    // --- DEBUG: print the variant catalog being used ---
+    println "Variant catalog file: $variant_catalogue_hg38"
 
     // call straglr and get annotations per contig
     str_vcf_and_tsv = call_str(bam_channel.combine(sex), ref_as_value, str_list)
